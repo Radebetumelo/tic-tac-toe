@@ -23,7 +23,6 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   background: #121212;
   font-family: sans-serif;
   margin: 20px;
@@ -53,17 +52,15 @@ body {
 
 .container {  
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
 .game_grid {
   min-width: 500px;
   min-height: 500px;
-  margin: 20px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 7px;
@@ -85,6 +82,9 @@ body {
   text-align: center;
   width: 165px;
 }
+.winning-square {
+  background-color: #535353;
+}
 
 .board-row:after {
   clear: both;
@@ -101,8 +101,23 @@ body {
 }
 
 .game-info {
-  margin-left: 20px;
+  position: absolute;
+
+  width: 510px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.game-info ol {
+  list-style: none;
+  display: flex;
+}
+
+
+
+
 
 .change_bg {
   background: #E0E0E0;

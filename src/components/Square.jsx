@@ -5,7 +5,7 @@ import img2 from "../images/game_X.png"
 
 
 
-function Square( {value, onSquareClick} ) {
+function Square( {value, onSquareClick, isWinningSquare} ) {
 
     let content;
     if (value === 'X'){
@@ -18,7 +18,7 @@ function Square( {value, onSquareClick} ) {
 
     return (
         <button 
-            className="square"
+            className={`square ${isWinningSquare ? "winning-square" : ""}`}
             onClick={onSquareClick}
         >
             {content}
